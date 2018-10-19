@@ -1,0 +1,22 @@
+{
+  "name": "shopper-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts:compile": "tsc -p ./",
+    "ts:watch": "tsc -p ./ --watch",
+    "scss:compile": "node-sass --output-style compressed --output public/assets/ src/scss",
+    "scss:watch": "node-sass --output-style compressed --output public/assets/ src/scss --watch *",
+    "serve": "live-server --port=5000 --no-browser --host=0.0.0.0 public",
+    "dev": "node devserver"
+  },
+  "author": "olback",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.4",
+    "typescript": "^3.1.3"
+  }
+}
