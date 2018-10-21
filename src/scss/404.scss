@@ -1,8 +1,13 @@
+/*!
+ *  shopper.ink
+ */
+
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'variables';
 
 html {
-    background-color: #2196f3;
-    font-family: 'Nunito', sans-serif;
+    background-color: $blue;
+    font-family: $fontPrimary;
 }
 
 main {
@@ -31,6 +36,11 @@ main {
     a {
         color: #fff;
         font-size: calc(24px + (48 - 24) * (100vw - 100px) / (3000 - 200));
+        transition: .1s color ease-in-out;
+
+        &:hover {
+            color: $lightGray;
+        }
     }
 
 }

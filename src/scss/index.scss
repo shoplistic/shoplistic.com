@@ -1,13 +1,19 @@
+/*!
+ *  shopper.ink
+ */
+
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 html,
 body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 ::selection {
-    background-color: #dc2430;
+    background-color: #ef5350;
+    opacity: 0;
 }
 
 @import 'header';

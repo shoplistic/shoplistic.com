@@ -1,6 +1,7 @@
+@import 'variables';
+
 $height: 100vh;
-$h1fs: calc(24px + (48 - 24) * (100vw - 100px) / (500 - 200));
-$h2fs: calc(24px + (48 - 24) * (100vw - 100px) / (4000 - 200));
+$h2hfs: calc(24px + (48 - 24) * (100vw - 100px) / (4000 - 200));
 
 header {
 
@@ -19,11 +20,11 @@ header {
         transform: translateY(-50%);
         margin-top: calc(#{$height} / 2);
         margin-left: 10vw;
-        font-family: 'Nunito', sans-serif;
+        font-family: $fontPrimary;
 
         h1 {
             color: #fff;
-            font-size: $h1fs;
+            font-size: calc(24px + (48 - 24) * (100vw - 100px) / (500 - 200));
             text-decoration: none;
             margin: 10pt;
             font-weight: 100;
@@ -34,7 +35,7 @@ header {
 
             h2 {
                 font-weight: 100;
-                font-size: $h2fs;
+                font-size: $h2hfs;
                 display: inline;
                 color: #fff;
                 line-height: 2em;
@@ -44,7 +45,7 @@ header {
             button {
                 display: inline;
                 margin: 0 10pt;
-                font-size: $h2fs;
+                font-size: $h2hfs;
                 border: 1px solid #fff;
                 border-radius: 0.2em;
                 color: #fff;
@@ -52,17 +53,17 @@ header {
                 padding: 0.4em 1em;
                 outline: none;
                 transition: .1s background-color ease-in-out;
-                font-family: 'Nunito', sans-serif;
+                font-family: $fontPrimary;
 
                 &:hover:not(:disabled) {
-                    background-color: #2196f3;
-                    border-color: #2196f3;
+                    background-color: $blue;
+                    border-color: $blue;
                 }
 
                 &:active:not(:disabled) {
                     // background: #dc2430;
-                    background-color: darken(#2196f3, 10%);
-                    border-color: darken(#2196f3, 10%);
+                    background-color: darken($blue, 10%);
+                    border-color: darken($blue, 10%);
                 }
 
                 &:disabled {
@@ -72,6 +73,75 @@ header {
 
             }
 
+        }
+
+    }
+
+    .header-arrow {
+        position: absolute;
+        display: block;
+        margin: auto;
+        bottom: 1vh;
+        width: 100%;
+
+        @media only screen and (max-width: 500px) {
+            bottom: 5vh;
+        }
+
+        img#arrow {
+            display: block;
+            margin: auto;
+            margin-bottom: 0;
+            margin-top: 0;
+            cursor: pointer;
+            transition: .1s margin-bottom ease-in-out, .1s margin-top ease-in-out;
+
+            &:hover {
+                margin-bottom: 1vh;
+                margin-top: -1vh;
+            }
+
+        }
+
+    }
+
+    .github-corner {
+        right: 0;
+        top: 0;
+        z-index: 100000;
+
+        &:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out;
+
+            @media (max-width: 500px) {
+                animation: none
+            }
+        }
+
+        @media (max-width:500px) {
+
+            &,
+            .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+        }
+
+        @keyframes octocat-wave {
+
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
         }
 
     }

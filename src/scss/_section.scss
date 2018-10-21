@@ -1,31 +1,78 @@
+@import 'variables';
+
 section {
     width: auto;
-    background-color: #2196f3;
+    background-color: $blue;
     padding: 128px;
     margin: 0;
     overflow-x: hidden;
+    color: #fff;
+    text-align: center;
 
     @media only screen and (max-width: 800px) {
         padding: 64px 5vw;
     }
 
     h1 {
-        font-family: 'Nunito', sans-serif;
+        font-family: $fontPrimary;
         font-weight: 100;
         text-align: center;
+        margin-top: 0;
         // text-decoration: underline;
         color: #fff;
         font-size: calc(24px + (48 - 24) * (100vw - 100px) / (1500 - 200));
     }
 
-    div.section-content {
-        display: block;
+    div.content {
+        display: inline-block;
         margin: auto;
 
-        figure {
+        .s-icon {
             display: block;
             float: left;
+            font-size: 144pt;
+            margin-right: 0.5em;
+
+            @media (max-width: 1210px) {
+                display: none;
+            }
+        }
+
+        .text {
+            font-family: $fontPrimary;
+            display: block;
+            float: left;
+            max-width: 600px;
+            text-align: left;
+            line-height: 1.4em;
+            font-size: 14pt;
+
+            h2 {
+                margin-top: 0;
+            }
+
+            @media (max-width: 1210px) {
+                float: none;
+                margin: auto;
+            }
+
+        }
+
+        &.right-icon {
+            .s-icon {
+                margin-right: 0;
+                margin-left: 0.5em;
+            }
+            // .text {
+            //     text-align: right !important;
+            // }
         }
 
     }
+
+    &:nth-of-type(2n) {
+        background-color: darken($blue, 12%);
+        // color: #fff;
+    }
+
 }
