@@ -1,9 +1,10 @@
 main {
-    margin-top: -10px;
     display: block;
     background-color: #fff;
-    // height: 50vh;
-    width: 100vw;
-    top: 89.5vh;
+    width: 100%;
+    top: 100vh;
     position: relative;
+
+    @import 'section';
+    @import 'footer';
 }

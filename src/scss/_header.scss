@@ -1,47 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+$height: 100vh;
+$h1fs: calc(24px + (48 - 24) * (100vw - 100px) / (500 - 200));
+$h2fs: calc(24px + (48 - 24) * (100vw - 100px) / (4000 - 200));
 
 header {
-    // background-color: #2196f3;
-    display: block;
-    position: absolute;
-    width: 100vw;
-    height: 90vh;
-    background-image: url('img/bicycle-1149483_1920.jpg');
+
+    background-image: url('../img/bicycle-1149483_1920_blur.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: blur(5px);
-}
-
-.header-wrapper {
 
     display: block;
     position: absolute;
-    height: 90vh;
-    width: 100vw;
+    height: $height;
+    width: 100%;
 
     .header-content {
         display: block;
-        // position: absolute;
         transform: translateY(-50%);
-        margin-top: calc(45vh);
+        margin-top: calc(#{$height} / 2);
         margin-left: 10vw;
-        // width: 100vw;
         font-family: 'Nunito', sans-serif;
 
-        h1,
-        h2 {
+        h1 {
             color: #fff;
-            // font-size: 4.6vw;
-            font-size: calc(24px + (48 - 24) * (100vw - 100px) / (500 - 200));
+            font-size: $h1fs;
+            text-decoration: none;
             margin: 10pt;
             font-weight: 100;
         }
 
-        h2 {
-            // font-size: 2vw;
-            font-size: calc(24px + (48 - 24) * (100vw - 100px) / (4000 - 200));
+        div {
+            margin: 10pt;
+
+            h2 {
+                font-weight: 100;
+                font-size: $h2fs;
+                display: inline;
+                color: #fff;
+                line-height: 2em;
+                margin: 0;
+            }
+
+            button {
+                display: inline;
+                margin: 0 10pt;
+                font-size: $h2fs;
+                border: 1px solid #fff;
+                border-radius: 0.2em;
+                color: #fff;
+                background: none;
+                padding: 0.4em 1em;
+                outline: none;
+                transition: .1s background-color ease-in-out;
+                font-family: 'Nunito', sans-serif;
+
+                &:hover:not(:disabled) {
+                    background-color: #2196f3;
+                    border-color: #2196f3;
+                }
+
+                &:active:not(:disabled) {
+                    // background: #dc2430;
+                    background-color: darken(#2196f3, 10%);
+                    border-color: darken(#2196f3, 10%);
+                }
+
+                &:disabled {
+                    color: #ccc;
+                    border-color: #ccc;
+                }
+
+            }
+
         }
+
     }
 
 }

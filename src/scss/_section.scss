@@ -1,0 +1,31 @@
+section {
+    width: auto;
+    background-color: #2196f3;
+    padding: 128px;
+    margin: 0;
+    overflow-x: hidden;
+
+    @media only screen and (max-width: 800px) {
+        padding: 64px 5vw;
+    }
+
+    h1 {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 100;
+        text-align: center;
+        // text-decoration: underline;
+        color: #fff;
+        font-size: calc(24px + (48 - 24) * (100vw - 100px) / (1500 - 200));
+    }
+
+    div.section-content {
+        display: block;
+        margin: auto;
+
+        figure {
+            display: block;
+            float: left;
+        }
+
+    }
+}

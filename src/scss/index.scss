@@ -1,6 +1,13 @@
-html, body {
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+html,
+body {
     margin: 0;
     padding: 0;
+}
+
+::selection {
+    background-color: #dc2430;
 }
 
 @import 'header';
