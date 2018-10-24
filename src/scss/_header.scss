@@ -105,45 +105,62 @@ header {
 
     }
 
-    .github-corner {
-        right: 0;
-        top: 0;
-        z-index: 100000;
+}
 
-        &:hover .octo-arm {
-            animation: octocat-wave 560ms ease-in-out;
+// Github corner CSS
+.github-corner {
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+    pointer-events: none;
+}
 
-            @media (max-width: 500px) {
-                animation: none
-            }
-        }
+.github-svg {
+    fill: #fff;
+    color: #151513;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+}
 
-        @media (max-width:500px) {
+.octo-triangle {
+    pointer-events: auto;
+}
 
-            &,
-            .octo-arm {
-                animation: octocat-wave 560ms ease-in-out
-            }
-        }
+.octo-arm {
+    transform-origin: 130px 106px;
+}
 
-        @keyframes octocat-wave {
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
 
-            0%,
-            100% {
-                transform: rotate(0)
-            }
+@keyframes octocat-wave {
 
-            20%,
-            60% {
-                transform: rotate(-25deg)
-            }
-
-            40%,
-            80% {
-                transform: rotate(10deg)
-            }
-        }
-
+    0%,
+    100% {
+        transform: rotate(0);
     }
 
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
 }
