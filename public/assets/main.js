@@ -1,8 +1,8 @@
 "use strict";
-var email = 'contact@shopper.ink';
+var email = 'contact@shoplistic.com';
 window.addEventListener('load', function () {
     document.getElementById('try-it').addEventListener('click', function () {
-        window.open('https://app.shopper.ink');
+        window.open('https://app.shoplistic.com');
     });
     document.getElementById('arrow').addEventListener('click', function () {
         document.getElementsByTagName('section')[0].scrollIntoView({

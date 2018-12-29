@@ -1,11 +1,11 @@
-const email = 'contact@shopper.ink';
+const email = 'contact@shoplistic.com';
 
 
 window.addEventListener('load', () => {
 
     // Try it button action
     document.getElementById('try-it').addEventListener('click', () => {
-        window.open('https://app.shopper.ink');
+        window.open('https://app.shoplistic.com');
     });
 
     // Arrow action
