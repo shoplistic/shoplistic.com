@@ -1,5 +1,4 @@
-const email = 'contact@shoplistic.com';
-
+const email = 'hello@shoplistic.com';
 
 window.addEventListener('load', () => {
 
@@ -18,7 +17,6 @@ window.addEventListener('load', () => {
     // Contact
     document.getElementById('contact').addEventListener('click', function () {
         const c = this as HTMLLinkElement;
-        console.log(c);
         c.href = `mailto:${email}`;
         c.innerText = email;
     });
