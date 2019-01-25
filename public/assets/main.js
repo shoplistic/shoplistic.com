@@ -1,5 +1,5 @@
 "use strict";
-var email = 'contact@shoplistic.com';
+var email = 'hello@shoplistic.com';
 window.addEventListener('load', function () {
     document.getElementById('try-it').addEventListener('click', function () {
         window.open('https://app.shoplistic.com');
@@ -11,7 +11,6 @@ window.addEventListener('load', function () {
     });
     document.getElementById('contact').addEventListener('click', function () {
         var c = this;
-        console.log(c);
         c.href = "mailto:" + email;
         c.innerText = email;
     });

@@ -3,6 +3,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'variables';
 
 html,
 body {
@@ -12,7 +13,8 @@ body {
 }
 
 ::selection {
-    background-color: #ef5350;
+    background-color: $lightGray;
+    color: $white;
     opacity: 0;
 }
 

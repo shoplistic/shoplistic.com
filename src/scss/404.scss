@@ -11,7 +11,7 @@ html {
 }
 
 main {
-    color: #fff;
+    color: $white;
     display: block;
     margin: auto;
     width: 100%;
@@ -34,12 +34,12 @@ main {
     }
 
     a {
-        color: #fff;
+        color: $white;
         font-size: calc(24px + (48 - 24) * (100vw - 100px) / (3000 - 200));
         transition: .1s color ease-in-out;
 
         &:hover {
-            color: $lightGray;
+            color: darken($white, 10%);
         }
     }
 

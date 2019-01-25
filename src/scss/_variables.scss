@@ -1,9 +1,15 @@
 // Colors
+$white: #f7f7f7;
 $blue: #2196f3;
 $lightGray: #9d9d9d;
+$gray: #323643;
 
 // Font stuff
 $fontPrimary: 'Nunito', sans-serif;
 
+// Sections
+$sectionBackgroundColor: $white;
+$sectionFontColor: $gray;
+
 // Footer
-$footerBackgroundColor: #414141;
+$footerBackgroundColor: $gray;
